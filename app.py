@@ -101,6 +101,7 @@ def read_vectors_db():
         model_kwargs={"device": "cuda" if torch.cuda.is_available() else "cpu"}
     )
     print(f"Đang tải vector database từ collection: {collection_path}")
+    
     client = QdrantClient(path=qdrant_persistent_path)
     try:
         collection_info = client.get_collection(collection_name=collection_path)

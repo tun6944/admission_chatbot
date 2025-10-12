@@ -20,6 +20,7 @@ CHUNK_CONFIG = {
     "gioi-thieu-chung.txt": {"size": 700, "overlap": 90},
     "thu-tuc-nhap-hoc.txt": {"size": 600, "overlap": 80},
 }
+
 def get_chunk_config(filename):
     base_filename = os.path.basename(filename)
     return CHUNK_CONFIG.get(base_filename, CHUNK_CONFIG["default"])
