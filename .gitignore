@@ -1,4 +1,4 @@
-chatbot-env/
+env_chatbot/
 .qdrant-initialized
 models/
 *.mp3
