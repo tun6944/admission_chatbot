@@ -19,5 +19,5 @@ embedding_model = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L12-v2",
     model_kwargs={"device": "cuda" if torch.cuda.is_available() else "cpu"}
 )
-
-print(f"Embedding model device: {embedding_model.client.device}")
+print(type(embedding_model._client))
+print(f"Embedding model device: {embedding_model._client.device}")
